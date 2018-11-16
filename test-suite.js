@@ -1,6 +1,18 @@
 const matchers = (exp) => ({
+
   toEqual: function(assertionToCheck) {
     if (exp !== assertionToCheck) {
+      console.log("Test Failed: Got \n"
+                  + exp
+                  + "\n when expected to get \n"
+                  + assertionToCheck
+                )} else {
+                  console.log('Sweet!')
+                }
+  },
+
+  toBeGreaterThan: function(assertionToCheck) {
+    if (exp <= assertionToCheck) {
       console.log("Test Failed: Got \n"
                   + exp
                   + "\n when expected to get \n"

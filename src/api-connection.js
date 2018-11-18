@@ -26,16 +26,13 @@ ApiConnection.prototype.showNews = function (json) {
     for (i = 0; i < 10; i ++) {
       let story = data.response.results[i]
       let storyTitle = document.createElement("li")
-      console.log(story.webTitle)
       storyTitle.innerHTML = story.webTitle
       document.body.appendChild(storyTitle)
     }
   })
 };
 
-NewsStory = function() {
 
-}
 
 //
 // response:

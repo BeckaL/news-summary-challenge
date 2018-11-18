@@ -1,0 +1,3 @@
+NewsList = function() {
+  this.stories = []
+}

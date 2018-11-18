@@ -10,6 +10,11 @@
     this.stories.push(ns)
   };
 
+  NewsList.prototype.getById = function (id) {
+    return this.stories[id]
+
+  };
+
   exports.NewsList = NewsList
 
 })(this)

@@ -20,4 +20,13 @@ describe("newsList", function() {
       expect(nl.stories[0].id).toEqual(0)
     })
   })
+
+  describe("get by id", function() {
+    it('gets story by id', function() {
+      var nl = new NewsList()
+      nl.add('Apocalypse imminent', 'www.apocalypsewhen.com')
+      nl.add('All fine dw', 'www.allfinedw.com')
+      expect(nl.getById(1).url).toEqual('www.allfinedw.com')
+    })
+  })
 })

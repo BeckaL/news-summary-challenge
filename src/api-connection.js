@@ -20,17 +20,7 @@ ApiConnection.prototype.fetchFromApi = function (address) {
   });
 };
 
-// ApiConnection.prototype.addNews = function (json) {
-//
-//   json.then( (data) =>{
-//     for (i = 0; i < 10; i ++) {
-//       let story = data.response.results[i]
-//       let storyTitle = document.createElement("li")
-//       storyTitle.innerHTML = story.webTitle
-//       document.body.appendChild(storyTitle)
-//     }
-//   })
-// };
+
 
 ApiConnection.prototype.addNews = function (json) {
 

@@ -22,16 +22,15 @@ ApiConnection.prototype.fetchFromApi = function (address) {
 
 
 
-ApiConnection.prototype.addNews = function (json) {
+ApiConnection.prototype.addNews = function (json, newsList) {
 
-  nl = new NewsList()
   json.then( (data) =>{
     for (i = 0; i < 10; i ++) {
       let story = data.response.results[i]
-      nl.add(story.webTitle, story.webUrl)
+      newsList.add(story.webTitle, story.webUrl)
     }
   })
-  return nl.stories
+  return newsList.stories
 };
 
 

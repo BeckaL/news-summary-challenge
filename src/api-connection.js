@@ -20,16 +20,28 @@ ApiConnection.prototype.fetchFromApi = function (address) {
   });
 };
 
-ApiConnection.prototype.showNews = function (json) {
+// ApiConnection.prototype.addNews = function (json) {
+//
+//   json.then( (data) =>{
+//     for (i = 0; i < 10; i ++) {
+//       let story = data.response.results[i]
+//       let storyTitle = document.createElement("li")
+//       storyTitle.innerHTML = story.webTitle
+//       document.body.appendChild(storyTitle)
+//     }
+//   })
+// };
 
+ApiConnection.prototype.addNews = function (json) {
+
+  nl = new NewsList()
   json.then( (data) =>{
     for (i = 0; i < 10; i ++) {
       let story = data.response.results[i]
-      let storyTitle = document.createElement("li")
-      storyTitle.innerHTML = story.webTitle
-      document.body.appendChild(storyTitle)
+      nl.add(story.webTitle, story.webUrl)
     }
   })
+  return nl.stories
 };
 
 
